@@ -36,6 +36,7 @@ class SessionCreateRequest(BaseModel):
 
 class SessionCreateResponse(BaseModel):
     session_id: str
+    project_id: str
     created_at: str
 
 
@@ -57,4 +58,3 @@ class RetryRequest(BaseModel):
 class ExportRequest(BaseModel):
     format: Literal["pptx"] = "pptx"
     with_narration: bool = False
-

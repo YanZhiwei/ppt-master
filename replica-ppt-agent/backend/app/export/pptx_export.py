@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 import zipfile
@@ -11,7 +12,18 @@ def export_pptx(project_dir: Path) -> tuple[bool, str]:
     script = repo_root / "skills" / "ppt-master" / "scripts" / "svg_to_pptx.py"
     # Debug/pipeline default uses native editable output only.
     cmd = [sys.executable, str(script), str(project_dir), "--only", "native"]
-    result = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True, check=False)
+    env = dict(os.environ)
+    env["PYTHONIOENCODING"] = "utf-8"
+    result = subprocess.run(
+        cmd,
+        cwd=repo_root,
+        env=env,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
     output = (result.stdout or "") + "\n" + (result.stderr or "")
     return result.returncode == 0, output.strip()
 

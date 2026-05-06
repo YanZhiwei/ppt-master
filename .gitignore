@@ -177,6 +177,7 @@ openspec/
 
 # replica-ppt-agent generated artifacts
 replica-ppt-agent/backend/debug_runs/
+replica-ppt-agent/backend/runtime/
 replica-ppt-agent/backend/.venv/
 replica-ppt-agent/frontend/dist/
 *.tsbuildinfo

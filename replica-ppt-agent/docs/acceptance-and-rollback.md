@@ -18,10 +18,13 @@
 5. Retry behavior
 - Failed page can be retried by page scope without restarting all completed pages.
 
+## Pilot Evidence
+
+- See `docs/pilot-run-report.md` for executed pilot themes, project IDs, exported artifacts, and pass/fail results.
+
 ## Rollback Procedure
 
 1. Disable replica export endpoint in deployment config.
 2. Route traffic back to previous stable release.
 3. Preserve failed-session artifacts for postmortem.
 4. Re-enable replica only after regression checks pass in staging.
-

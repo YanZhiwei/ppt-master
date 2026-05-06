@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 from uuid import uuid4
 
@@ -27,7 +28,10 @@ class SessionState:
     created_at: str = field(default_factory=utc_now)
     phase: Phase = Phase.planning
     blocked_confirmation: bool = True
+    prompt: str = ""
     project_id: str = field(default_factory=lambda: f"proj_{uuid4().hex[:10]}")
+    project_dir: str = ""
+    artifacts: dict[str, Any] = field(default_factory=dict)
     steps: list[StepState] = field(default_factory=list)
     events: list[dict[str, Any]] = field(default_factory=list)
 
@@ -67,35 +71,102 @@ class WorkflowStore:
             }
         )
 
+    def emit(self, session_id: str, event: str, payload: dict[str, Any]) -> None:
+        state = self.get(session_id)
+        self._emit(state, event, payload)
+
+    def set_project_dir(self, session_id: str, project_dir: Path) -> None:
+        state = self.get(session_id)
+        state.project_dir = str(project_dir)
+        self._emit(state, "project_bound", {"project_dir": state.project_dir})
+
+    def set_step(
+        self,
+        session_id: str,
+        step_name: str,
+        status: StepStatus,
+        message: str = "",
+        extra: dict[str, Any] | None = None,
+    ) -> None:
+        state = self.get(session_id)
+        step = next((x for x in state.steps if x.name == step_name), None)
+        if step is None:
+            step = StepState(step_name, status, message)
+            state.steps.append(step)
+        else:
+            step.status = status
+            step.message = message
+            step.updated_at = utc_now()
+        payload: dict[str, Any] = {"step": step_name, "status": status.value}
+        if message:
+            payload["message"] = message
+        if extra:
+            payload.update(extra)
+        self._emit(state, "step_updated", payload)
+
+    def transition(self, session_id: str, nxt: Phase, reason: str = "") -> None:
+        state = self.get(session_id)
+        if state.phase == nxt:
+            return
+        if not can_transition(state.phase, nxt):
+            message = f"Invalid transition: {state.phase.value} -> {nxt.value}"
+            self._emit(state, "error", {"message": message})
+            raise ValueError(message)
+        state.phase = nxt
+        payload: dict[str, Any] = {"phase": nxt.value}
+        if reason:
+            payload["reason"] = reason
+        self._emit(state, "phase_changed", payload)
+
+    def mark_failed(self, session_id: str, message: str) -> None:
+        state = self.get(session_id)
+        state.phase = Phase.failed
+        self._emit(state, "phase_changed", {"phase": state.phase.value})
+        self._emit(state, "error", {"message": message})
+
+    def mark_done(self, session_id: str, payload: dict[str, Any]) -> None:
+        self.transition(session_id, Phase.done, reason="export_complete")
+        self._emit(self.get(session_id), "done", payload)
+
     def apply_message(self, session_id: str, message_type: str, _message: str) -> str:
         state = self.get(session_id)
         trace_id = f"trace_{uuid4().hex[:12]}"
 
+        if message_type == "prompt":
+            state.prompt = _message
+            self._emit(state, "prompt_received", {"trace_id": trace_id})
+            return trace_id
+
         if message_type == "confirm" and state.blocked_confirmation:
             state.blocked_confirmation = False
-            state.steps[0].status = StepStatus.completed
-            state.steps[0].updated_at = utc_now()
-            self._emit(state, "step_updated", {"step": "strategist_confirm", "status": "completed"})
-
-            state.phase = Phase.rendering
-            self._emit(state, "phase_changed", {"phase": state.phase.value})
-            state.steps[1].status = StepStatus.running
-            self._emit(state, "step_updated", {"step": "render_pages", "status": "running"})
+            self.set_step(session_id, "strategist_confirm", StepStatus.completed)
+            self.transition(session_id, Phase.rendering, reason="confirmation_passed")
+            self.set_step(session_id, "render_pages", StepStatus.running)
             return trace_id
 
         if state.blocked_confirmation:
             self._emit(state, "warning", {"message": "Workflow blocked by strategist confirmation gate"})
             return trace_id
 
-        self._emit(state, "step_updated", {"step": "render_pages", "status": "running"})
+        self.set_step(session_id, "render_pages", StepStatus.running)
         return trace_id
 
     def retry(self, session_id: str, scope: RetryScope, target: str) -> str:
         state = self.get(session_id)
         trace_id = f"trace_{uuid4().hex[:12]}"
         if scope == RetryScope.phase:
-            state.phase = Phase[target] if target in Phase.__members__ else Phase.rendering
-            self._emit(state, "phase_changed", {"phase": state.phase.value, "retry_scope": "phase"})
+            if target in Phase.__members__:
+                phase = Phase[target]
+            elif target in {x.value for x in Phase}:
+                phase = next(x for x in Phase if x.value == target)
+            else:
+                phase = Phase.rendering
+            state.phase = phase
+            self._emit(
+                state,
+                "phase_changed",
+                {"phase": state.phase.value, "retry_scope": "phase"},
+            )
         else:
             self._emit(state, "step_updated", {"step": "render_pages", "status": "running", "page": target})
         return trace_id
@@ -115,4 +186,3 @@ def can_transition(current: Phase, nxt: Phase) -> bool:
 
 
 store = WorkflowStore()
-
