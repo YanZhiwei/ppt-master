@@ -26,6 +26,8 @@ $RECYCLE.BIN/
 # Editor and IDE Files
 # VSCode
 .vscode/
+.cursor/
+.codex/
 .claude/
 .spec-workflow/
 !.vscode/settings.json
@@ -169,3 +171,6 @@ PERSONAL_NOTES.md
 # Use cloud sync (iCloud/Dropbox) for backup and multi-device access
 projects/*
 !projects/README.md
+
+# OpenSpec workspace
+openspec/

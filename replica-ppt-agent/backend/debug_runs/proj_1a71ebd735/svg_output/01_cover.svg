@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7FAFF"/>
+<rect x="0" y="0" width="1280" height="16" fill="#1D4ED8"/>
+<rect x="0" y="690" width="1280" height="30" fill="#0F172A"/>
+<rect x="70" y="110" width="1140" height="500" rx="24" fill="#FFFFFF" stroke="#DBEAFE" stroke-width="2"/>
+<circle cx="1110" cy="180" r="110" fill="#DBEAFE" fill-opacity="0.7"/>
+<circle cx="980" cy="560" r="140" fill="#BFDBFE" fill-opacity="0.55"/>
+<text x="130" y="280" font-size="60" fill="#0F172A" font-weight="700" font-family="Arial, Microsoft YaHei">AI提效：驱动企业效率升级与业务增长</text>
+<text x="130" y="350" font-size="30" fill="#334155" font-weight="400" font-family="Arial, Microsoft YaHei">聚焦企业场景下的AI应用价值与落地路径 面向管理层与业务团队的商务汇报框架</text>
+<text x="130" y="640" font-size="20" fill="#E2E8F0" font-family="Arial, Microsoft YaHei">Replica PPT Agent · AI Generated</text>
+</svg>

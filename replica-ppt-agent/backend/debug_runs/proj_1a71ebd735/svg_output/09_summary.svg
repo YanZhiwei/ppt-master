@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F1F5F9"/>
+<text x="90" y="100" font-size="48" fill="#0F172A" font-weight="700" font-family="Arial, Microsoft YaHei">风险控制与关键成功要素</text>
+<rect x="90" y="150" width="1100" height="220" rx="20" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="130" y="260" font-size="38" fill="#0F172A" font-family="Arial, Microsoft YaHei">“建立数据安全、权限管理与内容审核机制，确保合规应用”</text>
+
+<circle cx="170" cy="406" r="8" fill="#2563EB"/>
+<text x="195" y="414" font-size="28" fill="#1E293B" font-family="Arial, Microsoft YaHei">明确人机协同边界，关键决策与高风险输出保留人工复核</text>
+
+<circle cx="170" cy="476" r="8" fill="#2563EB"/>
+<text x="195" y="484" font-size="28" fill="#1E293B" font-family="Arial, Microsoft YaHei">通过培训与制度建设提升员工使用能力与接受度</text>
+
+<circle cx="170" cy="546" r="8" fill="#2563EB"/>
+<text x="195" y="554" font-size="28" fill="#1E293B" font-family="Arial, Microsoft YaHei">由管理层牵引、业务部门主导、IT团队支撑，形成协同推进机制</text>
+
+</svg>

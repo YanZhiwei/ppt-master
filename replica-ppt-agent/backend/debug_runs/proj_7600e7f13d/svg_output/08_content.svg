@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+<text x="80" y="90" font-size="48" fill="#0F172A" font-weight="700" font-family="Arial, Microsoft YaHei">组织能力建设：打造持续提效的底座</text>
+<line x1="80" y1="118" x2="1200" y2="118" stroke="#CBD5E1" />
+
+<rect x="80" y="180" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="80" y="180" width="10" height="120" rx="6" fill="#2563EB" />
+<text x="110" y="232" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">组织层面需明确牵头机制，通常由业务、IT</text><text x="110" y="266" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">、数据与人力共同组成跨部门推进团队</text>
+
+<rect x="80" y="330" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="80" y="330" width="10" height="120" rx="6" fill="#2563EB" />
+<text x="110" y="382" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">通过分层培训提升员工使用能力，让管理者</text><text x="110" y="416" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">会决策、骨干会设计、一线会应用</text>
+
+
+<rect x="700" y="180" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="700" y="180" width="10" height="120" rx="6" fill="#0EA5E9" />
+<text x="730" y="232" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">能力建设重点包括数据治理、场景设计、提</text><text x="730" y="266" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">示词应用、模型管理与效果评估能力</text>
+
+<rect x="700" y="330" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="700" y="330" width="10" height="120" rx="6" fill="#0EA5E9" />
+<text x="730" y="382" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">建立制度与流程保障，包括使用规范、风险</text><text x="730" y="416" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">审查、绩效激励与案例沉淀机制</text>
+
+</svg>

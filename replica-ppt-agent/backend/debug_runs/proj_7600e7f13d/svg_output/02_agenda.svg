@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+<rect x="0" y="0" width="1280" height="96" fill="#0F172A"/>
+<text x="90" y="62" font-size="44" fill="#FFFFFF" font-weight="700" font-family="Arial, Microsoft YaHei">目录</text>
+
+<rect x="140" y="190" width="1000" height="58" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+<circle cx="180" cy="219" r="18" fill="#1D4ED8"/>
+<text x="173" y="226" font-size="18" fill="#FFFFFF" font-weight="700" font-family="Arial, Microsoft YaHei">1</text>
+<text x="220" y="228" font-size="28" fill="#0F172A" font-weight="400" font-family="Arial, Microsoft YaHei">AI提效的业务背景与核心价值</text>
+
+<rect x="140" y="268" width="1000" height="58" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+<circle cx="180" cy="297" r="18" fill="#1D4ED8"/>
+<text x="173" y="304" font-size="18" fill="#FFFFFF" font-weight="700" font-family="Arial, Microsoft YaHei">2</text>
+<text x="220" y="306" font-size="28" fill="#0F172A" font-weight="400" font-family="Arial, Microsoft YaHei">投入产出评估框架与测算方法</text>
+
+<rect x="140" y="346" width="1000" height="58" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+<circle cx="180" cy="375" r="18" fill="#1D4ED8"/>
+<text x="173" y="382" font-size="18" fill="#FFFFFF" font-weight="700" font-family="Arial, Microsoft YaHei">3</text>
+<text x="220" y="384" font-size="28" fill="#0F172A" font-weight="400" font-family="Arial, Microsoft YaHei">试点策略设计与落地路径</text>
+
+<rect x="140" y="424" width="1000" height="58" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+<circle cx="180" cy="453" r="18" fill="#1D4ED8"/>
+<text x="173" y="460" font-size="18" fill="#FFFFFF" font-weight="700" font-family="Arial, Microsoft YaHei">4</text>
+<text x="220" y="462" font-size="28" fill="#0F172A" font-weight="400" font-family="Arial, Microsoft YaHei">组织能力建设与保障机制</text>
+
+<rect x="140" y="502" width="1000" height="58" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+<circle cx="180" cy="531" r="18" fill="#1D4ED8"/>
+<text x="173" y="538" font-size="18" fill="#FFFFFF" font-weight="700" font-family="Arial, Microsoft YaHei">5</text>
+<text x="220" y="540" font-size="28" fill="#0F172A" font-weight="400" font-family="Arial, Microsoft YaHei">实施建议与下一步行动</text>
+
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+<text x="90" y="80" font-size="44" fill="#0F172A" font-weight="700" font-family="Arial, Microsoft YaHei">ROI测算逻辑：优先选择高价值、低复杂度场景</text>
+<rect x="70" y="130" width="1140" height="530" rx="20" fill="#EFF6FF" stroke="#BFDBFE"/>
+
+<rect x="100" y="190" width="320" height="170" rx="16" fill="#FFFFFF" stroke="#DBEAFE"/>
+<text x="124" y="238" font-size="24" fill="#334155" font-weight="400" font-family="Arial, Microsoft YaHei">指标1</text>
+<text x="124" y="308" font-size="46" fill="#1D4ED8" font-weight="700" font-family="Arial, Microsoft YaHei">场景筛选维度</text>
+
+<rect x="460" y="190" width="320" height="170" rx="16" fill="#FFFFFF" stroke="#DBEAFE"/>
+<text x="484" y="238" font-size="24" fill="#334155" font-weight="400" font-family="Arial, Microsoft YaHei">指标2</text>
+<text x="484" y="308" font-size="46" fill="#1D4ED8" font-weight="700" font-family="Arial, Microsoft YaHei">短期优先：客</text>
+
+<rect x="820" y="190" width="320" height="170" rx="16" fill="#FFFFFF" stroke="#DBEAFE"/>
+<text x="844" y="238" font-size="24" fill="#334155" font-weight="400" font-family="Arial, Microsoft YaHei">指标3</text>
+<text x="844" y="308" font-size="46" fill="#1D4ED8" font-weight="700" font-family="Arial, Microsoft YaHei">中期拓展：销</text>
+
+<rect x="100" y="400" width="320" height="170" rx="16" fill="#FFFFFF" stroke="#DBEAFE"/>
+<text x="124" y="448" font-size="24" fill="#334155" font-weight="400" font-family="Arial, Microsoft YaHei">指标4</text>
+<text x="124" y="518" font-size="46" fill="#1D4ED8" font-weight="700" font-family="Arial, Microsoft YaHei">通过试点验证</text>
+
+</svg>

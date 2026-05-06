@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+<text x="80" y="90" font-size="48" fill="#0F172A" font-weight="700" font-family="Arial, Microsoft YaHei">AI提效的业务背景与核心价值</text>
+<line x1="80" y1="118" x2="1200" y2="118" stroke="#CBD5E1" />
+
+<rect x="80" y="180" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="80" y="180" width="10" height="120" rx="6" fill="#2563EB" />
+<text x="110" y="232" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">企业面临人效增长放缓、流程复杂度提升与</text><text x="110" y="266" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">成本压力加大的多重挑战</text>
+
+<rect x="80" y="330" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="80" y="330" width="10" height="120" rx="6" fill="#2563EB" />
+<text x="110" y="382" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">价值不仅体现在节省工时，更体现在响应速</text><text x="110" y="416" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">度、质量稳定性与客户体验提升</text>
+
+
+<rect x="700" y="180" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="700" y="180" width="10" height="120" rx="6" fill="#0EA5E9" />
+<text x="730" y="232" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">AI可在内容生成、知识检索、流程自动化与</text><text x="730" y="266" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">辅助决策等场景实现显著提效</text>
+
+<rect x="700" y="330" width="500" height="120" rx="16" fill="#FFFFFF" stroke="#E2E8F0" />
+<rect x="700" y="330" width="10" height="120" rx="6" fill="#0EA5E9" />
+<text x="730" y="382" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">管理层关注重点应从“是否使用AI”转向“</text><text x="730" y="416" font-size="24" fill="#1E293B" font-weight="400" font-family="Arial, Microsoft YaHei">如何形成可复制的经营价值”</text>
+
+</svg>

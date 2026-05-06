@@ -1,0 +1,28 @@
+name: replica-ppt-agent-ci
+
+on:
+  push:
+    paths:
+      - "replica-ppt-agent/**"
+  pull_request:
+    paths:
+      - "replica-ppt-agent/**"
+
+jobs:
+  backend-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: replica-ppt-agent/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run tests
+        run: pytest -q
+
